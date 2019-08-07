@@ -5,13 +5,13 @@ const meow = require('meow')
 const getStore = require('../')
 
 const minimistOptions = {
-    string: ['token', 'owner', 'repo', 'file', 'extract', 'silent'],
-    alias: { t: 'token', o: 'owner', r: 'repo', f: 'file', e: 'extract' }
+    string: ['token', 'owner', 'repo', 'file', 'extract', 'silent', 'branch'],
+    alias: { t: 'token', o: 'owner', r: 'repo', f: 'file', e: 'extract', b: 'branch' }
 }
 
 const args = minimist(process.argv.slice(2), minimistOptions)
 
-const { token, owner, repo, file, extract, silent = false } = args
+const { token, owner, repo, file, extract, silent = false, branch = 'master' } = args
 
 meow(`
     Usage:
@@ -25,6 +25,7 @@ meow(`
         -o, --owner        target repository owner or organization
         -r, --repo         target repository name
         -f, --file         target file for fetch
+        -b, --branch       GitHub repository branch. default: master
         -e, --extract      file name for result eg. key.json [not required]
         --silent           do not print result.
         `,
@@ -35,7 +36,7 @@ if (!token || !owner || !repo || !file) {
     return
 }
 
-getStore({ token, owner, repo, file, extract })
+getStore({ token, owner, repo, file, extract, branch })
     .then(response => {
         if (!silent) {
             console.log(response.data)
