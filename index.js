@@ -18,7 +18,7 @@ meow(`
     Usage:
         gh-kv [options]
 
-        gh-kv.cmd --token <GitHub Token> --owner <Owner or Organization> --repo <REPO_NAME> --file <TARGET_FILENAME> --extract <OUTPUT_FILENAME>
+        gh-kv --token <GitHub Token> --owner <Owner or Organization> --repo <REPO_NAME> --file <TARGET_FILENAME> --extract <OUTPUT_FILENAME>
 
     Options:
         -h, --help         print usage information
