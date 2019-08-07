@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/ChangJoo-Park/kv.git"
   },
-  "keywords": [],
+  "keywords": ["key management", "key", "value", "github"],
   "author": "ChangJoo Park<pcjpcj2@gmail.com>",
   "license": "MIT",
   "bugs": {
