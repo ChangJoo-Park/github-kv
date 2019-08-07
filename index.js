@@ -14,10 +14,7 @@ const args = minimist(process.argv.slice(2), minimistOptions)
 
 const { token, owner, repo, file, extract } = args
 
-if (!token || !owner || !repo || !file) {
-    console.log('Need help? `gh-kv --help`')
-
-    return meow(`
+meow(`
     Usage:
         gh-kv [options]
 
@@ -30,7 +27,11 @@ if (!token || !owner || !repo || !file) {
         -r, --repo         target repository name
         -f, --file         target file for fetch
         -e, --extract      file name for result eg. key.json [not required]`,
-        minimistOptions)
+    minimistOptions)
+
+if (!token || !owner || !repo || !file) {
+    console.log('Need help? `gh-kv --help`')
+    return
 }
 
 const url = `https://api.github.com/repos/${owner}/${repo}/contents/${file}`
