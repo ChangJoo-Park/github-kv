@@ -18,6 +18,19 @@ When [create new Personal Access Token](https://github.com/settings/tokens/new),
 
 ## Usage
 
+### Example key-value store
+
+please show store.json in this repo.
+
+```json
+{
+    "ACCESS_KEY": "HELLO",
+    "SECRET_KEY": "WORLD"
+}
+```
+
+in Terminal
+
 ```bash
 # gh-kv --token <GitHub Token> --owner <Owner or Organization> --repo <REPO_NAME> --file <TARGET_FILENAME> --extract <OUTPUT_FILENAME>
 gh-kv --token <GitHub Token> --owner changjoo-park --repo kv --file store.json --extract key.json
