@@ -5,9 +5,7 @@ GitHub as a Key Value store.
 ## Caveat
 
 
-https://github.com/settings/tokens/new
-
-You should check only repo.
+When [create new Personal Access Token](https://github.com/settings/tokens/new), You should check only repo.
 
 
 ## Usage
