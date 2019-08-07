@@ -29,5 +29,5 @@ axios({ headers, url })
         }
     })
     .catch(error => {
-        console.error(error.response)
+        console.error(error.response.data)
     })
