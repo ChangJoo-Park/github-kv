@@ -1,4 +1,4 @@
-# GitHub Key, Value
+# GitHub Key-Value Store
 
 GitHub as a Key Value store.
 
