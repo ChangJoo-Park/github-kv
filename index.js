@@ -24,6 +24,7 @@ const headers = {
 }
 axios({ headers, url })
     .then(response => {
+        console.log(response.data)
         if (extract) {
             fs.writeFileSync(extract, JSON.stringify(response.data))
         }
