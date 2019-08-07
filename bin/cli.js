@@ -5,13 +5,13 @@ const meow = require('meow')
 const getStore = require('../')
 
 const minimistOptions = {
-    string: ['token', 'owner', 'repo', 'file', 'extract'],
+    string: ['token', 'owner', 'repo', 'file', 'extract', 'silent'],
     alias: { t: 'token', o: 'owner', r: 'repo', f: 'file', e: 'extract' }
 }
 
 const args = minimist(process.argv.slice(2), minimistOptions)
 
-const { token, owner, repo, file, extract } = args
+const { token, owner, repo, file, extract, silent = false } = args
 
 meow(`
     Usage:
@@ -25,7 +25,9 @@ meow(`
         -o, --owner        target repository owner or organization
         -r, --repo         target repository name
         -f, --file         target file for fetch
-        -e, --extract      file name for result eg. key.json [not required]`,
+        -e, --extract      file name for result eg. key.json [not required]
+        --silent           do not print result.
+        `,
     minimistOptions)
 
 if (!token || !owner || !repo || !file) {
@@ -35,7 +37,9 @@ if (!token || !owner || !repo || !file) {
 
 getStore({ token, owner, repo, file, extract })
     .then(response => {
-        console.log(response.data)
+        if (!silent) {
+            console.log(response.data)
+        }
         if (extract) {
             fs.writeFileSync(extract, JSON.stringify(response.data))
         }
