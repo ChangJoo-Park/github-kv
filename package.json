@@ -1,6 +1,6 @@
 {
   "name": "github-kv",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "GitHub as a Key Value store.",
   "main": "index.js",
   "scripts": {
@@ -10,14 +10,19 @@
     "type": "git",
     "url": "git+https://github.com/ChangJoo-Park/kv.git"
   },
-  "keywords": ["key management", "key", "value", "github"],
+  "keywords": [
+    "key management",
+    "key",
+    "value",
+    "github"
+  ],
   "author": "ChangJoo Park<pcjpcj2@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ChangJoo-Park/kv/issues"
   },
   "bin": {
-    "gh-kv": "index.js"
+    "gh-kv": "./bin/cli.js"
   },
   "homepage": "https://github.com/ChangJoo-Park/kv#readme",
   "dependencies": {
