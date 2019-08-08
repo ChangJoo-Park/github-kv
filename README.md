@@ -4,6 +4,8 @@
 
 GitHub as a Key Value store.
 
+[한국어 안내](https://medium.com/@changjoopark/github-%EC%A0%80%EC%9E%A5%EC%86%8C%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EC%84%A4%EC%A0%95%EA%B4%80%EB%A6%AC-32c8228f4c33)
+
 ## Installation
 
 ```bash
