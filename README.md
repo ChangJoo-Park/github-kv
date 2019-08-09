@@ -36,7 +36,12 @@ please show store.json in this repo.
 in Terminal. extract is optional
 
 ```bash
-# gh-kv --token <GitHub Token> --owner <Owner or Organization> --repo <REPO_NAME> --file <TARGET_FILENAME> --extract <OUTPUT_FILENAME>
+# gh-kv --token <GitHub Token> \
+#         --owner <Owner or Organization> \
+#         --repo <REPO_NAME> \
+#         --file <TARGET_FILENAME> \
+#         --extract <OUTPUT_FILENAME> \
+#         --webhook <WEBHOOK_POST_URL>
 gh-kv --token <GitHub Token> --owner changjoo-park --repo kv --file store.json --extract key.json
 ```
 
